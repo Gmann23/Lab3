@@ -28,48 +28,102 @@ echo Running all tests..."\n\n
 
 
 # Add tests below
-test "PINA: 0x00 => PORTC: 0"
+# All 15 tests
+test “tempA - 0”
 setPINA 0x00
-continue 5
-expectPORTC 0
+continue 2
+expectPORTC 0x00
 checkResult
 
-test "PINA: 0x1 => PORTC: 60"
+test “tempA - 1”
 setPINA 0x01
-continue 5
+continue 2
 expectPORTC 0x60
 checkResult
 
-test "PINA: 0x4 => PORTC: 70"
-setPINA 0x04
-continue 5
+test “tempA - 2”
+setPINA 0x02
+continue 2
+expectPORTC 0x60
+checkResult
+
+test “tempA - 3”
+setPINA 0x03
+continue 2
 expectPORTC 0x70
 checkResult
 
-test "PINA: 0x06 => PORTC: 38"
-setPINA 0x06
-continue 5
+test “tempA - 4”
+setPINA 0x04
+continue 2
+expectPORTC 0x70
+checkResult
+
+test “tempA - 5”
+setPINA 0x05
+continue 2
 expectPORTC 0x38
 checkResult
 
-test "PINA: 0x09 => PORTC: 3C"
-setPINA 0x09
-continue 5
+test “tempA - 6”
+setPINA 0x06
+continue 2
+expectPORTC 0x38
+checkResult
+
+test “tempA - 7”
+setPINA 0x07
+continue 2
 expectPORTC 0x3C
 checkResult
 
-test "PINA: 0x0A => PORTC: 3E"
+test “tempA - 8”
+setPINA 0x08
+continue 2
+expectPORTC 0x3C
+checkResult
+
+test “tempA - 9”
+setPINA 0x09
+continue 2
+expectPORTC 0x3C
+checkResult
+
+test “tempA - 10”
 setPINA 0x0A
-continue 5
+continue 2
 expectPORTC 0x3E
 checkResult
 
-test "PINA: 0x0F => PORTC: 3F"
-setPINA 0x0F
-continue 5
+test “tempA - 11”
+setPINA 0x0B
+continue 2
+expectPORTC 0x3E
+checkResult
+
+test “tempA - 12”
+setPINA 0x0C
+continue 2
+expectPORTC 0x3E
+checkResult
+
+test “tempA - 13”
+setPINA 0x0D
+continue 2
 expectPORTC 0x3F
 checkResult
 
+test “tempA - 14”
+setPINA 0x0E
+continue 2
+expectPORTC 0x3F
+checkResult
+
+test “tempA - 15”
+setPINA 0x0F
+continue 2
+expectPORTC 0x3F
+checkResult
 
 
 # Report on how many tests passed/tests ran
